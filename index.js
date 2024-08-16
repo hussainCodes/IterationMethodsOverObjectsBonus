@@ -132,7 +132,7 @@ console.log(totalVideosDuration(channels[0]))
 
 const channelWithMostContent = (channels) => {
   let highestDuration = channels[0];
-  channels.forEach(channel => totalVideosDuration(channel) > highestDuration ? highestDuration = totalVideosDuration(channel):false)
+  channels.forEach(channel => totalVideosDuration(channel) > totalVideosDuration(highestDuration) ? highestDuration = channel:false)
   return highestDuration;
 }
 console.log(channelWithMostContent(channels))
